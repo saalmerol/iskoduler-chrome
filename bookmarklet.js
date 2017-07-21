@@ -1,0 +1,1 @@
+ (function () {    var jsCode = document.createElement('script');    jsCode.setAttribute('src', 'https://cdn.rawgit.com/DarkPotatoKing/darkpotatoking.github.io/52c641ab/IskoDulerStandalone.js');  document.body.appendChild(jsCode); }());
