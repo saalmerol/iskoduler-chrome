@@ -1,6 +1,9 @@
 var alertError = function(arg) {
     if (arg.url.match(/https:\/\/crs\.upd\.edu\.ph\/preenlistment*/) == null) {
-        alert('Iskoduler will automatically compute the probabilities when you open the CRS preenlistment page.');
+        alert('You are not on the CRS preenlistment page! Iskoduler will automatically compute the probabilities when you open the CRS preenlistment page.');
+    }
+    else {
+        window.location.hash = 'tbl_class-info';
     }
 };
 chrome.browserAction.onClicked.addListener(alertError);
