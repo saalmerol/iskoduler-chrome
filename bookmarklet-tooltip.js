@@ -1,0 +1,1 @@
+(function () {  var jsCode2 = document.createElement("script"); jsCode2.setAttribute("src", "https://rawgit.com/saalmerol/iskoduler-chrome/master/crstooltip.js"); document.body.appendChild(jsCode2); }());

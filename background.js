@@ -21,6 +21,13 @@ chrome.tabs.onActivated.addListener(function(info) {
                 tabId: info.tabId
             });
             console.log('not matching');
+        } else if (change.url.match(/https:\/\/crs\.upd\.edu\.ph\/preenlistment\/subject_search*/) != null) {
+            chrome.tabs.executeScript(tab.id, {file: "bookmarklet-tooltip.js"});
+            chrome.browserAction.setIcon({
+                path: 'icon-128.png',
+                tabId: info.tabId
+            });
+            console.log('matched');
         } else {
             chrome.tabs.executeScript(tab.id, {file: "bookmarklet.js"});
             chrome.browserAction.setIcon({
@@ -40,6 +47,13 @@ chrome.tabs.onUpdated.addListener(function(tabId, change, tab) {
             tabId: tabId
         });
         console.log('not matching');
+    } else if (change.url.match(/https:\/\/crs\.upd\.edu\.ph\/preenlistment\/subject_search*/) != null) {
+        chrome.tabs.executeScript(tab.id, {file: "bookmarklet-tooltip.js"});
+        chrome.browserAction.setIcon({
+            path: 'icon-128.png',
+            tabId: info.tabId
+        });
+        console.log('matched');
     } else {
         chrome.tabs.executeScript(tab.id, {file: "bookmarklet.js"});
         chrome.browserAction.setIcon({
